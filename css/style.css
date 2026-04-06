@@ -25,6 +25,16 @@
   
   --transition-juicy: cubic-bezier(0.34, 1.56, 0.64, 1);
   --glass-bg: rgba(255, 255, 255, 0.02);
+  
+  /* Skeleton Loading */
+  --skeleton-bg: #1a202c;
+  --skeleton-shimmer: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.08) 60%,
+    rgba(255, 255, 255, 0)
+  );
 }
 
 /* ---------- Reset & Base ---------- */
@@ -33,6 +43,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-light);
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .navbar-brand, .hero-label, .timeline-tag {
@@ -690,6 +701,31 @@ img {
   position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
+  background-color: var(--skeleton-bg);
+}
+
+/* Skeleton Effect */
+.skeleton-loader {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: var(--skeleton-shimmer);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .portfolio-thumb {
@@ -1308,20 +1344,65 @@ img {
 
 @media (max-width: 576px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-player-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    width: 95%;
+  }
+
+  .stat-item {
+    flex-wrap: wrap;
+    gap: 0.5rem !important;
   }
 
   .hero-content .hero-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .hero-mascot {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .player-stats {
+    gap: 1rem;
   }
 
   .btn-primary-custom {
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
     font-size: 0.8rem;
+    width: 100%;
   }
 
   .info-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .scanlines {
+    opacity: 0.3; /* Subtle on mobile */
+  }
+
+  .timeline::before {
+    left: 20px !important;
+  }
+
+  .timeline-item {
+    padding-left: 50px !important;
+    text-align: left !important;
+  }
+
+  .timeline-dot {
+    left: 20px !important;
   }
 }
 

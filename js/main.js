@@ -7,11 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Preloader ----
   const preloader = document.getElementById('preloader');
-  window.addEventListener('load', () => {
-    setTimeout(() => {
+  
+  // Hide preloader when page is fully loaded or after a 3s timeout (safety)
+  const hidePreloader = () => {
+    if (preloader && !preloader.classList.contains('hidden')) {
       preloader.classList.add('hidden');
-    }, 600);
-  });
+    }
+  };
+
+  window.addEventListener('load', hidePreloader);
+  
+  // Fallback for slower connections: hide preloader anyway after 3 seconds
+  setTimeout(hidePreloader, 3000);
 
   // ---- Navbar scroll effect ----
   const navbar = document.querySelector('.navbar-custom');
@@ -167,6 +174,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const skillItems = document.querySelectorAll('.info-card ul li');
   skillItems.forEach((item, i) => {
     item.style.transitionDelay = `${i * 0.05}s`;
+  });
+
+  // ---- Remove skeleton loader when image is loaded ----
+  const lazyImages = document.querySelectorAll('.portfolio-thumb-wrapper img');
+  lazyImages.forEach(img => {
+    if (img.complete) {
+      img.parentElement.classList.remove('skeleton-loader');
+    } else {
+      img.addEventListener('load', () => {
+        img.parentElement.classList.remove('skeleton-loader');
+      });
+    }
   });
 
   // Initialize
