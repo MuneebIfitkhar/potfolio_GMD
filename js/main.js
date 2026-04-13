@@ -1,31 +1,27 @@
 /* ============================================
-   PORTFOLIO - Muhammad Muneeb Iftikhar
-   Main JavaScript
+   PORTFOLIO — Muhammad Muneeb Iftikhar
+   Main JavaScript (VayuApps Redesign)
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Preloader ----
+  // ─── Preloader ───
   const preloader = document.getElementById('preloader');
-  
-  // Hide preloader when page is fully loaded or after a 3s timeout (safety)
   const hidePreloader = () => {
     if (preloader && !preloader.classList.contains('hidden')) {
       preloader.classList.add('hidden');
     }
   };
-
   window.addEventListener('load', hidePreloader);
-  
-  // Fallback for slower connections: hide preloader anyway after 3 seconds
   setTimeout(hidePreloader, 3000);
 
-  // ---- Navbar scroll effect ----
-  const navbar = document.querySelector('.navbar-custom');
-  const navLinks = document.querySelectorAll('.nav-link');
+  // ─── Navbar scroll effect ───
+  const navbar = document.querySelector('.navbar-vayu');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
   const sections = document.querySelectorAll('section[id]');
 
   function handleNavbarScroll() {
+    if (!navbar) return;
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
@@ -33,15 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ---- Active nav link on scroll ----
+  // ─── Active nav link on scroll ───
   function updateActiveNav() {
-    const scrollPos = window.scrollY + 120;
-
+    const scrollPos = window.scrollY + 160;
     sections.forEach(section => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
       const id = section.getAttribute('id');
-
       if (scrollPos >= top && scrollPos < top + height) {
         navLinks.forEach(link => {
           link.classList.remove('active');
@@ -53,29 +47,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- Fade-in on scroll (Intersection Observer) ----
-  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
-  
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // ─── Smooth scroll for nav links ───
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        // Close mobile nav if open
+        closeMobileNav();
+      }
+    });
+  });
 
-  const fadeObserver = new IntersectionObserver((entries) => {
+  // ─── Mobile Nav ───
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinksContainer = document.querySelector('.nav-links');
+  const navOverlay = document.querySelector('.nav-overlay');
+
+  function closeMobileNav() {
+    if (navToggle) navToggle.classList.remove('active');
+    if (navLinksContainer) navLinksContainer.classList.remove('open');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinksContainer.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        navToggle.classList.add('active');
+        navLinksContainer.classList.add('open');
+        if (navOverlay) navOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMobileNav);
+  }
+
+  // ─── Scroll Reveal (Intersection Observer) ───
+  const revealElements = document.querySelectorAll('.reveal, .stagger-children');
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target);
+        revealObserver.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
 
-  fadeElements.forEach(el => fadeObserver.observe(el));
+  revealElements.forEach(el => revealObserver.observe(el));
 
-  // ---- Back to Top ----
+  // ─── Counter Animation for Stats ───
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  let statsAnimated = false;
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !statsAnimated) {
+        statsAnimated = true;
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const statsSection = document.querySelector('.stats');
+  if (statsSection) statsObserver.observe(statsSection);
+
+  function animateCounters() {
+    statNumbers.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const suffix = counter.getAttribute('data-suffix') || '';
+      const duration = 1500;
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        counter.textContent = current + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  // ─── Back to Top ───
   const backToTop = document.getElementById('backToTop');
 
   function handleBackToTop() {
+    if (!backToTop) return;
     if (window.scrollY > 500) {
       backToTop.classList.add('visible');
     } else {
@@ -83,13 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
-  // ---- Consolidated scroll listener ----
+  // ─── Consolidated scroll listener ───
   let ticking = false;
-
   window.addEventListener('scroll', () => {
     if (!ticking) {
       requestAnimationFrame(() => {
@@ -102,22 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ---- Mobile nav collapse on link click ----
-  const navbarCollapse = document.getElementById('navbarNav');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navbarCollapse.classList.contains('show')) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
-      }
-    });
-  });
-
-  // ---- Portfolio Modal Navigation ----
-  const portfolioItems = document.querySelectorAll('[data-project-index]');
+  // ─── Portfolio Modal Navigation ───
   const projectModals = document.querySelectorAll('.project-modal');
 
   window.openProjectModal = function(index) {
-    // Close any open modals first
     projectModals.forEach(m => {
       const modalInstance = bootstrap.Modal.getInstance(m);
       if (modalInstance) modalInstance.hide();
@@ -132,58 +197,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // ---- Parallax-like effect on hero orbs ----
-  const orbs = document.querySelectorAll('.hero-bg .orb');
-
-  window.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-    orbs.forEach((orb, i) => {
-      const speed = (i + 1) * 8;
-      orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-    });
-  });
-
-  // ---- Typed effect for hero subtitle ----
-  const heroSubtitle = document.querySelector('.hero-subtitle');
-  if (heroSubtitle) {
-    const text = heroSubtitle.textContent;
-    heroSubtitle.textContent = '';
-    heroSubtitle.style.borderRight = '2px solid var(--primary)';
-
-    let i = 0;
-    function typeEffect() {
-      if (i < text.length) {
-        heroSubtitle.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 50);
-      } else {
-        // Remove cursor after typing
-        setTimeout(() => {
-          heroSubtitle.style.borderRight = 'none';
-        }, 1500);
-      }
-    }
-
-    // Delay start
-    setTimeout(typeEffect, 1200);
-  }
-
-  // ---- Counter animation for skills ----
-  const skillItems = document.querySelectorAll('.info-card ul li');
-  skillItems.forEach((item, i) => {
-    item.style.transitionDelay = `${i * 0.05}s`;
-  });
-
-  // ---- Remove skeleton loader when image is loaded ----
-  const lazyImages = document.querySelectorAll('.portfolio-thumb-wrapper img');
+  // ─── Remove skeleton loader when image is loaded ───
+  const lazyImages = document.querySelectorAll('.project-card-img img');
   lazyImages.forEach(img => {
     if (img.complete) {
-      img.parentElement.classList.remove('skeleton-loader');
+      img.closest('.skeleton-loader')?.classList.remove('skeleton-loader');
     } else {
       img.addEventListener('load', () => {
-        img.parentElement.classList.remove('skeleton-loader');
+        img.closest('.skeleton-loader')?.classList.remove('skeleton-loader');
       });
     }
   });

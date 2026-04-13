@@ -10,26 +10,15 @@
   <meta name="keywords"
     content="Muhammad Muneeb Iftikhar, Game Developer, Unity, Software Engineer, Portfolio, Lahore, Pakistan">
   <meta name="author" content="Muhammad Muneeb Iftikhar">
-
-  <!-- Preconnect to CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-  <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;500;700&family=Rajdhani:wght@500;600;700&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
-
-  <!-- Bootstrap 5 CSS -->
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=3.5">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
 </head>
 
 <body>
@@ -39,436 +28,469 @@
     <div class="spinner"></div>
   </div>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="#hero">Muneeb <span>Iftikhar</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacts">Contacts</a>
-          </li>
-        </ul>
+  <!-- Navbar -->
+  <nav class="navbar-vayu" id="mainNav">
+    <div class="navbar-inner">
+      <a href="#hero" class="nav-logo">Muneeb <span class="logo-accent">Iftikhar</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Let's Talk →</a>
       </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section id="hero">
-    <div class="hero-bg">
-      <div class="grid-pattern"></div>
-      <div class="scanlines"></div>
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1 class="hero-headline reveal">Building games that<br><span class="serif-italic">players love</span></h1>
+    <p class="hero-sub reveal reveal-delay-1">Dynamic and passionate Software Engineer with expertise in Unity game
+      development. Eager to contribute innovative solutions and drive excellence in a collaborative team environment.
+    </p>
+    <div class="hero-ctas reveal reveal-delay-2">
+      <a href="#work" class="btn-primary">View My Work <span>→</span></a>
+      <a href="#contact" class="btn-secondary">Contact Me</a>
     </div>
-    <div class="hero-content fade-in">
-      <div class="hero-player-card">
-        <div class="hero-mascot">
-          <i class="fas fa-user-ninja"></i>
+    <div class="hero-divider"></div>
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stats-grid reveal reveal-delay-3">
+        <div class="stat-item">
+          <span class="stat-number" data-target="7" data-suffix="+">0+</span>
+          <span class="stat-label">Years Building</span>
         </div>
-        <div class="hero-label">PLAYER</div>
-        <h1 class="glitch-text" data-text="Muneeb Iftikhar">Muneeb Iftikhar</h1>
-        <div class="hero-subtitle">SOFTWARE ENGINEER // UNITY GAME DEVELOPER</div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="16" data-suffix="+">0+</span>
+          <span class="stat-label">Games Shipped</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="7" data-suffix="">0</span>
+          <span class="stat-label">Studios</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Player Stats Bar -->
-        <div class="player-stats mt-4" style="margin-left: 0; text-align: left;">
-          <div class="stat-item" style="justify-content: flex-start; gap: 1rem;">
-            <span class="stat-label">LEVEL</span>
-            <span class="stat-value">25</span>
+  <!-- Work / Projects -->
+  <section id="work" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">Work</span>
+      <h2 class="section-title reveal">Selected <span class="serif-italic">projects</span></h2>
+      <p class="section-desc reveal">A showcase of Unity games and software solutions I've developed.</p>
+      <div class="projects-grid stagger-children">
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal1" id="project-item-1">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/Pen_Sim/unnamed.jpg"
+              alt="Penguin Life Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Simulation</span><span
+                class="badge-tag">Unity</span></div>
+            <h3 class="project-card-title">Penguin Life Simulator</h3>
+            <p class="project-card-desc">Experience the life of a penguin in this immersive simulation game.</p>
           </div>
-          <div class="stat-bar-container">
-            <div class="stat-label d-flex" style="gap: 1rem; margin-bottom: 0.5rem;">
-              <span>EXP</span>
-              <span>85%</span>
+          <div class="project-card-footer"><span class="project-card-studio">Ozi Publishing</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal2" id="project-item-2">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/BC_SIM/1.jpg" alt="Bomb Chips">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Casual</span><span class="badge-tag">Unity</span>
             </div>
-            <div class="stat-bar">
-              <div class="stat-fill exp-fill" style="width: 85%"></div>
+            <h3 class="project-card-title">Bomb Chips</h3>
+            <p class="project-card-desc">A fast-paced casual game where timing and strategy are key.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">QLT Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal3" id="project-item-3">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/TxiD_Sim/1.jpg"
+              alt="Taxi Driver Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Driving</span><span class="badge-tag">Unity</span>
             </div>
+            <h3 class="project-card-title">Taxi Driver Simulator</h3>
+            <p class="project-card-desc">Navigate through traffic and manage your time to earn the best ratings.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">Giochii</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal4" id="project-item-4">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/Brd_Sim/BadPigeon_1.jpg"
+              alt="Bird Pranks Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Physics</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Bird Pranks Simulator</h3>
+            <p class="project-card-desc">Fly around the city and pull off hilarious pranks on unsuspecting humans.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal5" id="project-item-5">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/BRNR_Sim/brainRot.jpg"
+              alt="Brainrot Meme Shooter Survival"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Action</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Brainrot Meme Shooter</h3>
+            <p class="project-card-desc">Survive waves of internet-famous characters in this chaotic shooter.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal6" id="project-item-6">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/KNKOTY_Sim/unnamed.jpg"
+              alt="Penguin Knock Out"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Action</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Penguin Knock Out</h3>
+            <p class="project-card-desc">Knock out your opponents and be the last penguin standing on the ice.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal7" id="project-item-7">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/WUR_Sim/unnamed.jpg"
+              alt="Would You Rather"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Puzzle</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Would You Rather</h3>
+            <p class="project-card-desc">Test your decision-making skills with hundreds of difficult choices.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal8" id="project-item-8">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/BSWRM_Sim/beeSwarm.jpg"
+              alt="Bee Swarm Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Simulation</span><span
+                class="badge-tag">Unity</span></div>
+            <h3 class="project-card-title">Bee Swarm Simulator</h3>
+            <p class="project-card-desc">Grow your own swarm of bees, collect pollen, and make honey!</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal9" id="project-item-9">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/crzyDoctor/unnamed.jpg"
+              alt="Crazy Doctor"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Medical</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Crazy Doctor</h3>
+            <p class="project-card-desc">Perform complex operations and save lives with precision and skill.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">Ozi Publishing</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal10" id="project-item-10">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/spinBattle/unnamed.jpg"
+              alt="Spin Battle Heroes"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Strategy</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Spin Battle Heroes</h3>
+            <p class="project-card-desc">Intense elemental battles with customized spin heroes.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal11" id="project-item-11">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/radDoll/unnamed.jpg"
+              alt="Ragdoll Race Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Physics</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Ragdoll Race Simulator</h3>
+            <p class="project-card-desc">Navigate through hilarious and challenging obstacle courses.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">Bonebreaker Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal12" id="project-item-12">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/punchitt/unnamed.jpg"
+              alt="Punch Smash Boxing"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Combat</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Punch Smash Boxing</h3>
+            <p class="project-card-desc">Master the art of boxing and become the undisputed champion.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">YHI Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal13" id="project-item-13">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/slingShott/unnamed.jpg"
+              alt="Sling Strike"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Action</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Sling Strike</h3>
+            <p class="project-card-desc">Use powerful slingshots to clear levels and solve physics puzzles.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">Sling Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal14" id="project-item-14">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/Bad_Cat/unnamed.jpg"
+              alt="Bad Cat Pet Simulator"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Simulation</span><span
+                class="badge-tag">Unity</span></div>
+            <h3 class="project-card-title">Bad Cat Pet Simulator</h3>
+            <p class="project-card-desc">Cause chaos in the house and enjoy the ultimate feline life.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">RHG Games</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal15" id="project-item-15">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/plasticArmy/unnamed.jpg"
+              alt="Plastic Army FPS"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">FPS</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Plastic Army FPS</h3>
+            <p class="project-card-desc">Command green plastic soldiers in epic backyard battles.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">Toy Soldiers</span></div>
+        </div>
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#projectModal16" id="project-item-16">
+          <div class="project-card-img skeleton-loader"><img loading="lazy" src="img/idlecar/unnamed.jpg"
+              alt="Spiral Ramp Car Racing"></div>
+          <div class="project-card-body">
+            <div class="project-card-badges"><span class="badge-tag">Racing</span><span class="badge-tag">Unity</span>
+            </div>
+            <h3 class="project-card-title">Spiral Ramp Car Racing</h3>
+            <p class="project-card-desc">Master extreme car stunts on the world's most dangerous ramps.</p>
+          </div>
+          <div class="project-card-footer"><span class="project-card-studio">G247 Games</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">Services</span>
+      <h2 class="section-title reveal">What I <span class="serif-italic">do</span></h2>
+      <div class="services-grid reveal">
+        <div class="service-block">
+          <span class="service-num">01</span>
+          <h3 class="service-title">Game Development</h3>
+          <p class="service-desc">Unity engine expertise, C# scripting, gameplay mechanics, physics systems, and AI
+            behaviors for mobile and console platforms.</p>
+        </div>
+        <div class="service-block">
+          <span class="service-num">02</span>
+          <h3 class="service-title">Backend Engineering</h3>
+          <p class="service-desc">Scalable API architectures, database management with MySQL, and server-side
+            development using PHP and Laravel.</p>
+        </div>
+        <div class="service-block">
+          <span class="service-num">03</span>
+          <h3 class="service-title">3D Art & Design</h3>
+          <p class="service-desc">Environment and character modeling with Blender, texture work in Adobe Photoshop, and
+            visual polish for game-ready assets.</p>
+        </div>
+        <div class="service-block">
+          <span class="service-num">04</span>
+          <h3 class="service-title">Mobile Games</h3>
+          <p class="service-desc">Cross-platform mobile game development from concept to App Store and Play Store
+            deployment, optimized for performance.</p>
+        </div>
+        <div class="service-block">
+          <span class="service-num">05</span>
+          <h3 class="service-title">Programming & Scripting</h3>
+          <p class="service-desc">Proficient in C++, C#, Python, Java — building robust systems from game logic to
+            automation tools.</p>
+        </div>
+        <div class="service-block">
+          <span class="service-num">06</span>
+          <h3 class="service-title">Optimization & QA</h3>
+          <p class="service-desc">Frame rate optimization, cross-platform performance tuning, and quality assurance for
+            production-ready builds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">Experience</span>
+      <h2 class="section-title reveal">My professional <span class="serif-italic">journey</span></h2>
+      <p class="section-desc reveal">My professional journey in game development and software engineering.</p>
+      <div class="experience-list reveal">
+        <div class="exp-item">
+          <div class="exp-period">2024 – Present<br><span class="exp-current-badge">Current</span></div>
+          <div class="exp-details">
+            <h4>Unity Game Developer</h4>
+            <p class="exp-company">Ozi Publishing</p>
+            <p class="exp-desc">Architecting deep Unity ecosystems for mobile and console deployment.</p>
           </div>
         </div>
+        <div class="exp-item">
+          <div class="exp-period">2023 – 2024</div>
+          <div class="exp-details">
+            <h4>Unity Game Developer</h4>
+            <p class="exp-company">Game Storm Studio</p>
+            <p class="exp-desc">Engineered core gameplay mechanics and physics-driven systems.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">2022 – 2023</div>
+          <div class="exp-details">
+            <h4>Unity Game Developer</h4>
+            <p class="exp-company">Game Surg Studio</p>
+            <p class="exp-desc">Developed AI behaviors and environmental interaction systems.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">2021 – 2022</div>
+          <div class="exp-details">
+            <h4>Unity Game Developer</h4>
+            <p class="exp-company">Game Tech Studio</p>
+            <p class="exp-desc">Optimization specialist: Boosted frame rates and cross-platform performance.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">2020 – 2021</div>
+          <div class="exp-details">
+            <h4>Associate Software Engineer</h4>
+            <p class="exp-company">Aimbot Studio</p>
+            <p class="exp-desc">Built secure backend structures and automated networking protocols.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">2019 – 2020</div>
+          <div class="exp-details">
+            <h4>Laravel Developer</h4>
+            <p class="exp-company">Brainload Technologies</p>
+            <p class="exp-desc">Architected scalable API infrastructures and data-management systems.</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">2018</div>
+          <div class="exp-details">
+            <h4>Web Developer Internee</h4>
+            <p class="exp-company">Carbon Teq</p>
+            <p class="exp-desc">First Mission: Mastered the foundations of web logic and UI/UX design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- <div class="mt-5">
-          <a href="#portfolio" class="btn-primary-custom" id="entry-btn">
-            <i class="fas fa-play me-2"></i> START MISSION
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">About</span>
+      <h2 class="section-title reveal">Meet the <span class="serif-italic">developer</span></h2>
+      <div class="about-layout">
+        <div class="about-image-wrapper reveal">
+          <img src="img/profile.jpeg" alt="Muhammad Muneeb Iftikhar" loading="lazy">
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <h3>About Me</h3>
+          <p>I am a dedicated Unity Game Developer with a passion for creating immersive digital experiences. My journey
+            in technology started with a fascination for how virtual worlds are constructed, leading me to specialize in
+            game architecture and development. I enjoy the challenge of solving complex technical problems through
+            creative coding and teamwork.</p>
+          <p>I am a software engineer with a strong focus on Unity game development, currently based in Lahore,
+            Pakistan. If you're looking for a dedicated developer to bring your game ideas to life, let's connect!</p>
+          <h3>Personal Details</h3>
+          <ul class="about-details">
+            <li><span class="about-detail-label">Date of Birth</span><span class="about-detail-value">August 10,
+                1998</span></li>
+            <li><span class="about-detail-label">Nationality</span><span class="about-detail-value">Pakistani</span>
+            </li>
+            <li><span class="about-detail-label">Marital Status</span><span class="about-detail-value">Married</span>
+            </li>
+            <li><span class="about-detail-label">Location</span><span class="about-detail-value">Lahore, Pakistan</span>
+            </li>
+          </ul>
+          <div class="about-quote">
+            <blockquote>"Around here, we don't look backwards for very long. We KEEP MOVING FORWARD, opening up new
+              doors and doing new things because we're curious and curiosity keeps leading us down new paths."
+            </blockquote>
+            <cite>— Walter E. Disney</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">Education</span>
+      <h2 class="section-title reveal">Academic <span class="serif-italic">background</span></h2>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h4>Bachelor of Science in Computer Science</h4>
+          <p class="edu-school">Lahore Garrison University</p>
+          <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <h4>F.Sc Pre-Engineering</h4>
+          <p class="edu-school">Garrison College for Boys</p>
+          <p class="edu-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container-vayu">
+      <span class="section-label reveal">Contact</span>
+      <h2 class="section-title reveal">Let's <span class="serif-italic">talk</span></h2>
+      <div class="contact-layout">
+        <div class="contact-text reveal">
+          <p class="contact-intro">Have a project in mind? Want to discuss a game idea? Or just want to say hi? I'd love
+            to hear from you. Let's build something amazing together.</p>
+        </div>
+        <div class="contact-cards-grid reveal reveal-delay-1">
+          <a href="mailto:muneebiftikhar00@gmail.com" class="contact-card" id="contact-email">
+            <span class="contact-card-icon"><i class="fas fa-envelope"></i></span>
+            <span class="contact-card-label">Email Me</span>
+            <span class="contact-card-value">muneebiftikhar00@gmail.com</span>
           </a>
-        </div> -->
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-heading section-heading-center">About & Objective</h2>
-        <p class="section-subheading mt-4">Dynamic and passionate Software Engineer with expertise in Unity game
-          development. Eager to contribute innovative solutions and drive excellence in a collaborative team
-          environment.</p>
-      </div>
-      <div class="row g-4">
-        <!-- Technical Skills -->
-        <div id="skills" class="col-lg-4 col-md-6 fade-in stagger-1">
-          <div class="info-card">
-            <div class="card-icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <h4>Programming Languages</h4>
-            <ul>
-              <li>C++</li>
-              <li>C#</li>
-              <li>PHP</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Tools & Engines -->
-        <div class="col-lg-4 col-md-6 fade-in stagger-2">
-          <div class="info-card">
-            <div class="card-icon">
-              <i class="fas fa-tools"></i>
-            </div>
-            <h4>Tools & Engines</h4>
-            <ul>
-              <li>Unity</li>
-              <li>Visual Studio</li>
-              <li>Blender</li>
-              <li>Adobe Photoshop</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Hobbies -->
-        <div class="col-lg-4 col-md-12 fade-in stagger-3">
-          <div class="info-card">
-            <div class="card-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h4>Hobbies</h4>
-            <ul>
-              <li>Cooking</li>
-              <li>Planting</li>
-              <li>Playing E-Games</li>
-              <li>Cricket</li>
-            </ul>
-          </div>
+          <a href="tel:+923094734475" class="contact-card" id="contact-phone">
+            <span class="contact-card-icon"><i class="fas fa-phone-alt"></i></span>
+            <span class="contact-card-label">Call Me</span>
+            <span class="contact-card-value">+92 309-4734475</span>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=923094734475" target="_blank" rel="noopener noreferrer"
+            class="contact-card" id="contact-whatsapp">
+            <span class="contact-card-icon"><i class="fab fa-whatsapp"></i></span>
+            <span class="contact-card-label">WhatsApp</span>
+            <span class="contact-card-value">Available 24/7</span>
+          </a>
+          <a href="https://linkedin.com/in/muhammad-muneebiftikhar" target="_blank" rel="noopener noreferrer"
+            class="contact-card" id="contact-linkedin">
+            <span class="contact-card-icon"><i class="fab fa-linkedin-in"></i></span>
+            <span class="contact-card-label">LinkedIn</span>
+            <span class="contact-card-value">Let's Connect</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-heading section-heading-center">Projects</h2>
-        <p class="section-subheading mt-4">A showcase of Unity games and software solutions I've developed.</p>
-      </div>
-      <div class="portfolio-grid">
-
-        <!-- Project 1: Penguin Life Simulator -->
-        <div class="portfolio-item fade-in stagger-1" data-project-index="1" data-bs-toggle="modal"
-          data-bs-target="#projectModal1" id="project-item-1">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/Pen_Sim/unnamed.jpg" alt="Penguin Life Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Penguin Life Simulator</h5>
-            <p>Simulation • Unity • Ozi Publishing</p>
-          </div>
+  <!-- Footer -->
+  <footer class="footer-vayu">
+    <div class="container-vayu">
+      <div class="footer-inner">
+        <span class="footer-logo">Muneeb Iftikhar</span>
+        <span class="footer-copy">&copy; 2026 Muhammad Muneeb Iftikhar. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/muhammad-muneebiftikhar" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:muneebiftikhar00@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=923094734475" target="_blank" aria-label="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
         </div>
-
-        <!-- Project 2: Bomb Chips -->
-        <div class="portfolio-item fade-in stagger-2" data-project-index="2" data-bs-toggle="modal"
-          data-bs-target="#projectModal2" id="project-item-2">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/BC_SIM/1.jpg" alt="Bomb Chips" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Bomb Chips</h5>
-            <p>Simulation • Unity • QLT Games</p>
-          </div>
-        </div>
-
-        <!-- Project 3: Taxi Driver Simulator -->
-        <div class="portfolio-item fade-in stagger-3" data-project-index="3" data-bs-toggle="modal"
-          data-bs-target="#projectModal3" id="project-item-3">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/TxiD_Sim/1.jpg" alt="Taxi Driver Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Taxi Driver Simulator</h5>
-            <p>Simulation • Unity • Giochii</p>
-          </div>
-        </div>
-
-        <!-- Project 4: Bird Pranks Simulator -->
-        <div class="portfolio-item fade-in stagger-4" data-project-index="4" data-bs-toggle="modal"
-          data-bs-target="#projectModal4" id="project-item-4">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/Brd_Sim/BadPigeon_1.jpg" alt="Bird Pranks Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Bird Pranks Simulator</h5>
-            <p>Simulation • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 5: Brainrot Meme Shooter Survival -->
-        <div class="portfolio-item fade-in stagger-5" data-project-index="5" data-bs-toggle="modal"
-          data-bs-target="#projectModal5" id="project-item-5">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/BRNR_Sim/brainRot.jpg" alt="Brainrot Meme Shooter Survival"
-              class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Brainrot Meme Shooter</h5>
-            <p>Action • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 6: Penguin Knock Out -->
-        <div class="portfolio-item fade-in stagger-6" data-project-index="6" data-bs-toggle="modal"
-          data-bs-target="#projectModal6" id="project-item-6">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/KNKOTY_Sim/unnamed.jpg" alt="Penguin Knock Out" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Penguin Knock Out</h5>
-            <p>Action • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 7: Would You Rather -->
-        <div class="portfolio-item fade-in stagger-7" data-project-index="7" data-bs-toggle="modal"
-          data-bs-target="#projectModal7" id="project-item-7">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/WUR_Sim/unnamed.jpg" alt="Would You Rather" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Would You Rather</h5>
-            <p>Puzzle • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 8: Bee Swarm Simulator -->
-        <div class="portfolio-item fade-in stagger-8" data-project-index="8" data-bs-toggle="modal"
-          data-bs-target="#projectModal8" id="project-item-8">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/BSWRM_Sim/beeSwarm.jpg" alt="Bee Swarm Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Bee Swarm Simulator</h5>
-            <p>Simulation • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 9: Crazy Doctor -->
-        <div class="portfolio-item fade-in" data-project-index="9" data-bs-toggle="modal"
-          data-bs-target="#projectModal9" id="project-item-9">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/crzyDoctor/unnamed.jpg" alt="Crazy Doctor" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Crazy Doctor</h5>
-            <p>Simulation • Unity • Ozi Publishing</p>
-          </div>
-        </div>
-
-        <!-- Project 10: Spin Battle Heroes -->
-        <div class="portfolio-item fade-in" data-project-index="10" data-bs-toggle="modal"
-          data-bs-target="#projectModal10" id="project-item-10">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/spinBattle/unnamed.jpg" alt="Spin Battle Heroes" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Spin Battle Heroes</h5>
-            <p>Action • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 11: Ragdoll Race Simulator -->
-        <div class="portfolio-item fade-in" data-project-index="11" data-bs-toggle="modal"
-          data-bs-target="#projectModal11" id="project-item-11">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/radDoll/unnamed.jpg" alt="Ragdoll Race Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Ragdoll Race Simulator</h5>
-            <p>Simulation • Unity • Bonebreaker Games</p>
-          </div>
-        </div>
-
-        <!-- Project 12: Punch Smash Boxing -->
-        <div class="portfolio-item fade-in" data-project-index="12" data-bs-toggle="modal"
-          data-bs-target="#projectModal12" id="project-item-12">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/punchitt/unnamed.jpg" alt="Punch Smash Boxing" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Punch Smash Boxing</h5>
-            <p>Action • Unity • YHI Games</p>
-          </div>
-        </div>
-
-        <!-- Project 13: Sling Strike -->
-        <div class="portfolio-item fade-in" data-project-index="13" data-bs-toggle="modal"
-          data-bs-target="#projectModal13" id="project-item-13">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/slingShott/unnamed.jpg" alt="Sling Strike" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Sling Strike</h5>
-            <p>Action • Unity • Sling Games</p>
-          </div>
-        </div>
-
-        <!-- Project 14: Bad Cat Pet Simulator -->
-        <div class="portfolio-item fade-in" data-project-index="14" data-bs-toggle="modal"
-          data-bs-target="#projectModal14" id="project-item-14">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/Bad_Cat/unnamed.jpg" alt="Bad Cat Pet Simulator" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Bad Cat Pet Simulator</h5>
-            <p>Simulation • Unity • RHG Games</p>
-          </div>
-        </div>
-
-        <!-- Project 15: Plastic Army FPS -->
-        <div class="portfolio-item fade-in" data-project-index="15" data-bs-toggle="modal"
-          data-bs-target="#projectModal15" id="project-item-15">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/plasticArmy/unnamed.jpg" alt="Plastic Army FPS" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Plastic Army FPS</h5>
-            <p>Action • Unity • Toy Soldiers</p>
-          </div>
-        </div>
-
-        <!-- Project 16: Spiral Ramp Car Racing -->
-        <div class="portfolio-item fade-in" data-project-index="16" data-bs-toggle="modal"
-          data-bs-target="#projectModal16" id="project-item-16">
-          <div class="portfolio-thumb-wrapper skeleton-loader">
-            <img loading="lazy" src="img/idlecar/unnamed.jpg" alt="Spiral Ramp Car Racing" class="portfolio-thumb">
-            <div class="portfolio-overlay">
-              <div class="view-icon">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-info">
-            <h5>Spiral Ramp Car Racing</h5>
-            <p>Racing • Unity • G247 Games</p>
-          </div>
-        </div>
-
-
       </div>
     </div>
-  </section>
-  </div>
-
-  <!-- ========== PORTFOLIO MODALS ========== -->
+  </footer>
 
   <!-- Modal 1: Penguin Life Simulator -->
   <div class="modal fade project-modal" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label"
@@ -477,7 +499,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal1Label">Penguin Life Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel1" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -489,35 +511,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/Pen_Sim/4.jpg" alt="Screenshot 4"></div>
               <div class="carousel-item"><img loading="lazy" src="img/Pen_Sim/5.jpg" alt="Screenshot 5"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Experience the life of a penguin in this immersive simulation game. Interact with the environment, survive
-            the arctic conditions, and build your penguin colony.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.ozipub.penguin.life.simulator&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Experience the life of a penguin in this immersive simulation game. Interact with the environment, survive
+            the arctic conditions, and build your penguin colony.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.ozipub.penguin.life.simulator&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">C#</span>
-            <span class="badge bg-secondary me-1">Simulation</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">C#</span> <span
+              class="badge">Simulation</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(16)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(2)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(16)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(2)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -530,7 +542,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal2Label">Bomb Chips</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel2" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -539,35 +551,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/BC_SIM/2.jpg" alt="Screenshot 2"></div>
               <div class="carousel-item"><img loading="lazy" src="img/BC_SIM/3.jpg" alt="Screenshot 3"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            A fast-paced casual game where timing and strategy are key. Navigate challenging levels and master the
-            mechanics of Bomb Chips.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.qtl.bomb.chips&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>A fast-paced casual game where timing and strategy are key. Navigate challenging levels and master the
+            mechanics of Bomb Chips.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.qtl.bomb.chips&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Casual</span>
-            <span class="badge bg-secondary me-1">Game Logic</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Casual</span> <span class="badge">Game
+              Logic</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(1)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(3)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(1)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(3)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -580,7 +582,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal3Label">Taxi Driver Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel3" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -590,35 +592,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/TxiD_Sim/3.jpg" alt="Screenshot 3"></div>
               <div class="carousel-item"><img loading="lazy" src="img/TxiD_Sim/4.jpg" alt="Screenshot 4"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Step into the shoes of a taxi driver in a bustling city. Pick up passengers, navigate through traffic, and
-            manage your time to earn the best ratings.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.giochii.taxi.driver&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Step into the shoes of a taxi driver in a bustling city. Pick up passengers, navigate through traffic, and
+            manage your time to earn the best ratings.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.giochii.taxi.driver&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Driving</span>
-            <span class="badge bg-secondary me-1">Open World</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Driving</span> <span class="badge">Open
+              World</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(2)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(4)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(2)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(4)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -631,7 +623,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal4Label">Bird Pranks Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel4" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -643,35 +635,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/Brd_Sim/BadPigeon_4.jpg" alt="Screenshot 4"></div>
               <div class="carousel-item"><img loading="lazy" src="img/Brd_Sim/BadPigeon_5.jpg" alt="Screenshot 5"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Take control of a prankster bird! Fly around the city and pull off hilarious pranks on unsuspecting humans
-            in this fun simulation game.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.rhg.bird.pranks.sim&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Take control of a prankster bird! Fly around the city and pull off hilarious pranks on unsuspecting humans
+            in this fun simulation game.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.rhg.bird.pranks.sim&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Physics</span>
-            <span class="badge bg-secondary me-1">Comedy</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Physics</span> <span
+              class="badge">Comedy</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(3)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(5)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(3)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(5)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -684,7 +666,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal5Label">Brainrot Meme Shooter</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel5" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -700,35 +682,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/BRNR_Sim/brainRot (4).jpg" alt="Screenshot 5">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            A chaotic and fun meme-inspired shooter where you must survive waves of internet-famous characters. Fast
-            action and hilarious visuals!
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.rhg.brainrot.meme.shooter.survival&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>A chaotic and fun meme-inspired shooter where you must survive waves of internet-famous characters. Fast
+            action and hilarious visuals!</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.rhg.brainrot.meme.shooter.survival&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Action</span>
-            <span class="badge bg-secondary me-1">Survival</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Action</span> <span
+              class="badge">Survival</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(4)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(6)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(4)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(6)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -741,7 +713,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal6Label">Penguin Knock Out</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel6" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -761,35 +733,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/KNKOTY_Sim/unnamed (6).jpg" alt="Screenshot 7">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            A competitive arctic battle where you must knock out your opponents and be the last penguin standing on the
-            ice.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.rhg.penguin.knock.out&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>A competitive arctic battle where you must knock out your opponents and be the last penguin standing on the
+            ice.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.rhg.penguin.knock.out&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Physics</span>
-            <span class="badge bg-secondary me-1">Multiplayer</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Physics</span> <span
+              class="badge">Multiplayer</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(5)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(7)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(5)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(7)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -802,7 +764,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal7Label">Would You Rather</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel7" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -813,35 +775,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/WUR_Sim/unnamed (2).jpg" alt="Screenshot 3"></div>
               <div class="carousel-item"><img loading="lazy" src="img/WUR_Sim/unnamed (5).jpg" alt="Screenshot 4"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel7" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel7" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Test your decision-making skills with hundreds of difficult and hilarious choices. See what others chose and
-            challenge your friends!
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.rhg.would.you.rather&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Test your decision-making skills with hundreds of difficult and hilarious choices. See what others chose
+            and challenge your friends!</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.rhg.would.you.rather&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Puzzle</span>
-            <span class="badge bg-secondary me-1">Social</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Puzzle</span> <span
+              class="badge">Social</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(6)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(8)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(6)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(8)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -854,7 +806,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="projectModal8Label">Bee Swarm Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel8" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -870,35 +822,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/BSWRM_Sim/beeSwarm (5).jpg" alt="Screenshot 5">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel8" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel8" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel8" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel8" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Grow your own swarm of bees, collect pollen, and make honey! Explore a vibrant world and discover new types
-            of bees in this relaxing simulation.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.rhg.bee.swarm.simulator&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Grow your own swarm of bees, collect pollen, and make honey! Explore a vibrant world and discover new types
+            of bees in this relaxing simulation.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.rhg.bee.swarm.simulator&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Simulation</span>
-            <span class="badge bg-secondary me-1">Casual</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Simulation</span> <span
+              class="badge">Casual</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(7)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(9)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(7)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(9)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -910,8 +852,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal9Label">Crazy Doctor</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal9Label">Crazy Doctor</h5><button type="button" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel9" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -929,35 +871,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/crzyDoctor/unnamed (7).jpg" alt="Screenshot 6">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel9" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel9" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel9" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel9" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Step into the role of a surgeon in this high-stakes medical simulation. Perform complex operations, manage
-            your clinic, and save lives with precision and skill.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.ozipub.crazy.doctor&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Step into the role of a surgeon in this high-stakes medical simulation. Perform complex operations, manage
+            your clinic, and save lives with precision and skill.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.ozipub.crazy.doctor&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Simulation</span>
-            <span class="badge bg-secondary me-1">Medical</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Simulation</span> <span
+              class="badge">Medical</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(8)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(10)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(8)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(10)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -969,8 +901,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal10Label">Spin Battle Heroes</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal10Label">Spin Battle Heroes</h5><button type="button"
+            class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel10" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -988,35 +920,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/spinBattle/unnamed (5).jpg" alt="Screenshot 6">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel10" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel10" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel10" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel10" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Engage in intense elemental battles with your customized spin heroes. Strategy and timing are key to
-            dominating the arena and climbing the global ranks.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.merge.battle.fight.heroes.games&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Engage in intense elemental battles with your customized spin heroes. Strategy and timing are key to
+            dominating the arena and climbing the global ranks.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.merge.battle.fight.heroes.games&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Action</span>
-            <span class="badge bg-secondary me-1">Strategy</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Action</span> <span
+              class="badge">Strategy</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(9)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(11)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(9)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(11)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1028,8 +950,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal11Label">Ragdoll Race Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal11Label">Ragdoll Race Simulator</h5><button type="button"
+            class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel11" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1043,35 +965,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/radDoll/unnamed (5).jpg" alt="Screenshot 6"></div>
               <div class="carousel-item"><img loading="lazy" src="img/radDoll/unnamed (6).jpg" alt="Screenshot 7"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel11" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel11" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel11" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel11" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Experience physics-defying racing where your characters are ragdolls! Navigate through hilarious and
-            challenging obstacle courses to reach the finish line.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.bonebreaker.ragdoll.race.game.simulator&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Experience physics-defying racing where your characters are ragdolls! Navigate through hilarious and
+            challenging obstacle courses to reach the finish line.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.bonebreaker.ragdoll.race.game.simulator&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Simulation</span>
-            <span class="badge bg-secondary me-1">Physics</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Simulation</span> <span
+              class="badge">Physics</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(10)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(12)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(10)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(12)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1083,8 +995,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal12Label">Punch Smash Boxing</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal12Label">Punch Smash Boxing</h5><button type="button"
+            class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel12" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1104,35 +1016,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/punchitt/unnamed (7).jpg" alt="Screenshot 7">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel12" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel12" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel12" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel12" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Enter the ring and unleash powerful combos! Master the art of boxing, upgrade your gear, and become the
-            undisputed champion in this action-packed fighter.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.yhi.punch.smash.boxing.arms&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Enter the ring and unleash powerful combos! Master the art of boxing, upgrade your gear, and become the
+            undisputed champion in this action-packed fighter.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.yhi.punch.smash.boxing.arms&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Action</span>
-            <span class="badge bg-secondary me-1">Combat</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Action</span> <span
+              class="badge">Combat</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(11)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(13)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(11)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(13)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1144,8 +1046,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal13Label">Sling Strike</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal13Label">Sling Strike</h5><button type="button" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel13" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1163,35 +1065,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/slingShott/unnamed (6).jpg" alt="Screenshot 6">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel13" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel13" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel13" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel13" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Aim, pull, and release! Use powerful slingshots to clear levels, solve physics puzzles, and strike down your
-            enemies with explosive accuracy.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.sling.strike.action.whackgame.simulator&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Aim, pull, and release! Use powerful slingshots to clear levels, solve physics puzzles, and strike down
+            your enemies with explosive accuracy.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.sling.strike.action.whackgame.simulator&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Action</span>
-            <span class="badge bg-secondary me-1">Physics</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Action</span> <span
+              class="badge">Physics</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(12)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(14)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(12)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(14)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1203,8 +1095,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal14Label">Bad Cat Pet Simulator</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal14Label">Bad Cat Pet Simulator</h5><button type="button"
+            class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel14" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1216,35 +1108,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/Bad_Cat/unnamed (3).jpg" alt="Screenshot 4"></div>
               <div class="carousel-item"><img loading="lazy" src="img/Bad_Cat/unnamed (5).jpg" alt="Screenshot 5"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel14" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel14" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel14" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel14" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            What's it like to be a mischievous cat? Cause chaos in the house, pull pranks on humans, and enjoy the
-            ultimate feline life in this fun simulation.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.scary.mom.bad.cat.pet.simulator.games&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>What's it like to be a mischievous cat? Cause chaos in the house, pull pranks on humans, and enjoy the
+            ultimate feline life in this fun simulation.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.scary.mom.bad.cat.pet.simulator.games&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Simulation</span>
-            <span class="badge bg-secondary me-1">Comedy</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Simulation</span> <span
+              class="badge">Comedy</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(13)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(15)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(13)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(15)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1256,8 +1138,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal15Label">Plastic Army FPS</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal15Label">Plastic Army FPS</h5><button type="button" class="btn-close"
+            data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel15" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1271,35 +1153,25 @@
               <div class="carousel-item"><img loading="lazy" src="img/plasticArmy/unnamed (4).jpg" alt="Screenshot 4">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel15" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel15" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel15" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel15" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Command your unit of green plastic soldiers in epic backyard battles. Intense FPS action where strategy and
-            cover are essential for victory.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.toy.soldiers.fps.war.battle.shooting&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Command your unit of green plastic soldiers in epic backyard battles. Intense FPS action where strategy and
+            cover are essential for victory.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.toy.soldiers.fps.war.battle.shooting&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Action</span>
-            <span class="badge bg-secondary me-1">FPS</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Action</span> <span
+              class="badge">FPS</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(14)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(16)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(14)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(16)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
@@ -1311,8 +1183,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModal16Label">Spiral Ramp Car Racing</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="projectModal16Label">Spiral Ramp Car Racing</h5><button type="button"
+            class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div id="carousel16" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -1326,325 +1198,57 @@
               <div class="carousel-item"><img loading="lazy" src="img/idlecar/unnamed (5).jpg" alt="Screenshot 6"></div>
               <div class="carousel-item"><img loading="lazy" src="img/idlecar/unnamed (6).jpg" alt="Screenshot 7"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel16" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel16" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel16" data-bs-slide="prev"><span
+                class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel16" data-bs-slide="next"><span
+                class="carousel-control-next-icon" aria-hidden="true"></span></button>
           </div>
-          <p style="color:var(--text-muted);line-height:1.8;">
-            Conquer impossible heights and dizzying spirals! Master the art of extreme car stunts on the world's most
-            dangerous ramps in this high-octane racer.
-          </p>
-          <div class="mt-4 mb-3">
-            <a href="https://play.google.com/store/apps/details?id=com.g247.spiral.ramp.car.racing.stunt.game&pcampaignid=web_share"
-              target="_blank" class="btn-primary-custom" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Play Now <i
-                class="fas fa-external-link-alt ms-2"></i></a>
+          <p>Conquer impossible heights and dizzying spirals! Master the art of extreme car stunts on the world's most
+            dangerous ramps in this high-octane racer.</p>
+          <div class="mt-4 mb-3"><a
+              href="https://play.google.com/store/apps/details?id=com.g247.spiral.ramp.car.racing.stunt.game&pcampaignid=web_share"
+              target="_blank" class="btn-primary-custom">Play Now <i class="fas fa-external-link-alt ms-2"></i></a>
           </div>
-          <div class="mt-3">
-            <span class="badge bg-secondary me-1">Unity</span>
-            <span class="badge bg-secondary me-1">Racing</span>
-            <span class="badge bg-secondary me-1">Action</span>
-          </div>
+          <div class="mt-3"><span class="badge">Unity</span> <span class="badge">Racing</span> <span
+              class="badge">Action</span></div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button class="modal-nav-btn" onclick="openProjectModal(15)">
-            <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i> Previous
-          </button>
-          <button class="modal-nav-btn" onclick="openProjectModal(1)">
-            Next <i class="fas fa-arrow-right" style="margin-left:0.5rem;"></i>
-          </button>
+          <button class="modal-nav-btn" onclick="openProjectModal(15)"><i class="fas fa-arrow-left"
+              style="margin-right:0.5rem;"></i> Previous</button>
+          <button class="modal-nav-btn" onclick="openProjectModal(1)">Next <i class="fas fa-arrow-right"
+              style="margin-left:0.5rem;"></i></button>
         </div>
       </div>
     </div>
   </div>
 
-
-  <section id="experience" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-heading section-heading-center">Experience</h2>
-        <p class="section-subheading mt-4">My professional journey in game development and software engineering.</p>
-      </div>
-
-      <div class="timeline">
-
-        <!-- Quest 1: Ozi Publishing -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card active-quest">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 25</span>
-              <span class="timeline-tag">CURRENT CAMPAIGN</span>
-            </div>
-            <h5>Unity Game Developer</h5>
-            <p class="company"><i class="fas fa-fort-awesome me-2"></i> Ozi Publishing</p>
-            <p class="period"><i class="fas fa-clock me-2"></i> 2024 – PRESENT</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-bullseye me-2"></i> Architecting deep Unity ecosystems for mobile and console
-                deployment.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node active"></div>
-        </div>
-
-        <!-- Quest 2: The Game Storm Studio -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 22</span>
-              <span class="timeline-tag">COMPLETED QUEST</span>
-            </div>
-            <h5>Unity Game Developer</h5>
-            <p class="company"><i class="fas fa-tower-observation me-2"></i> Game Storm Studio</p>
-            <p class="period"><i class="fas fa-calendar-check me-2"></i> 2023 – 2024</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-check-circle me-2"></i> Engineered core gameplay mechanics and physics-driven systems.
-              </p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
-        <!-- Quest 3: Game Surg Studio -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 18</span>
-              <span class="timeline-tag">COMPLETED QUEST</span>
-            </div>
-            <h5>Unity Game Developer</h5>
-            <p class="company"><i class="fas fa-dungeon me-2"></i> Game Surg Studio</p>
-            <p class="period"><i class="fas fa-calendar-alt me-2"></i> 2022 – 2023</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-scroll me-2"></i> Developed AI behaviors and environmental interaction systems.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
-        <!-- Quest 4: Game Tech Studio -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 15</span>
-              <span class="timeline-tag">COMPLETED QUEST</span>
-            </div>
-            <h5>Unity Game Developer</h5>
-            <p class="company"><i class="fas fa-microchip me-2"></i> Game Tech Studio</p>
-            <p class="period"><i class="fas fa-calendar-alt me-2"></i> 2021 – 2022</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-bolt me-2"></i> Optimization specialist: Boosted frame rates and cross-platform
-                performance.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
-        <!-- Quest 5: Aimbot Studio -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 12</span>
-              <span class="timeline-tag">COMPLETED QUEST</span>
-            </div>
-            <h5>Associate Software Engineer</h5>
-            <p class="company"><i class="fas fa-crosshairs me-2"></i> Aimbot Studio</p>
-            <p class="period"><i class="fas fa-calendar-alt" style="color:var(--primary);margin-right:0.4rem;"></i> 2020
-              – 2021</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-shield-alt me-2"></i> Built secure backend structures and automated networking
-                protocols.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
-        <!-- Quest 6: Brainload Technologies -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 08</span>
-              <span class="timeline-tag">COMPLETED QUEST</span>
-            </div>
-            <h5>Laravel Developer</h5>
-            <p class="company"><i class="fas fa-brain me-2"></i> Brainload Technologies</p>
-            <p class="period"><i class="fas fa-calendar-alt" style="color:var(--primary);margin-right:0.4rem;"></i> 2019
-              – 2020</p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-database me-2"></i> Architected scalable API infrastructures and data-management
-                systems.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
-        <!-- Quest 7: Carbon Teq -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-content quest-card">
-            <div class="quest-header">
-              <span class="quest-lvl">LVL. 01</span>
-              <span class="timeline-tag">THE INITIATION</span>
-            </div>
-            <h5>Web Developer Internee</h5>
-            <p class="company"><i class="fas fa-leaf me-2"></i> Carbon Teq</p>
-            <p class="period"><i class="fas fa-calendar-alt" style="color:var(--primary);margin-right:0.4rem;"></i> 2018
-            </p>
-            <div class="quest-objective mt-3">
-              <p><i class="fas fa-seedling me-2"></i> First Mission: Mastered the foundations of web logic and UI/UX
-                design.</p>
-            </div>
-          </div>
-          <div class="timeline-dot quest-node"></div>
-        </div>
-
+  <!-- Chatbot Widget -->
+  <div class="chat-widget-launcher" id="chatLauncher">
+    <i class="fas fa-comment-dots chat-icon"></i>
+    <i class="fas fa-times close-icon"></i>
+  </div>
+  <div class="chat-widget-container" id="chatContainer">
+    <div class="chat-header">
+      <div class="status-dot"></div>
+      <div class="chat-header-info">
+        <h4>Muneeb AI</h4>
+        <p>Portfolio Assistant</p>
       </div>
     </div>
-  </section>
-
-  <section id="education" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-heading section-heading-center">Education</h2>
-        <p class="section-subheading mt-4">Academic background and certifications.</p>
-      </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-5 col-md-6 fade-in">
-          <div class="info-card">
-            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p><strong>Lahore Garrison University</strong></p>
-            <p class="period"><i class="fas fa-university me-2"></i> Lahore, Pakistan</p>
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-6 fade-in">
-          <div class="info-card">
-            <div class="card-icon"><i class="fas fa-school"></i></div>
-            <h4>F.Sc Pre-Engineering</h4>
-            <p><strong>Garrison College for Boys</strong></p>
-            <p class="period"><i class="fas fa-map-marker-alt me-2"></i> Lahore, Pakistan</p>
-          </div>
-        </div>
-      </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="typing" id="typingIndicator"><span></span><span></span><span></span></div>
+    <div class="chat-input-container">
+      <input type="text" class="chat-input" placeholder="Ask about Muneeb..." aria-label="Chat Input">
+      <button class="chat-send-btn" id="chatSend"><i class="fas fa-paper-plane"></i></button>
     </div>
-  </section>
-
-  <!-- ========== CONTACTS SECTION ========== -->
-  <section id="contacts" class="section-padding">
-    <div class="container">
-
-      <!-- Profile -->
-      <div class="contact-profile fade-in">
-        <div class="profile-img-wrapper">
-          <img src="img/profile.jpeg" alt="Muhammad Muneeb Iftikhar" loading="lazy">
-        </div>
-        <h3>Muhammad Muneeb Iftikhar</h3>
-        <p class="role">Software Engineer • Unity Game Developer</p>
-        <p class="bio">
-          I am a software engineer with a strong focus on Unity game development, currently based in Lahore, Pakistan.
-          If you're looking for a dedicated developer to bring your game ideas to life, let's connect!
-        </p>
-      </div>
-
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-heading section-heading-center">I hope you got interested in my works!</h2>
-      </div>
-
-      <!-- Contact Cards -->
-      <div class="contact-cards fade-in">
-        <a href="mailto:muneebiftikhar00@gmail.com" class="contact-card" id="contact-email">
-          <div class="card-icon"><i class="fas fa-envelope"></i></div>
-          <p class="card-label">Email</p>
-          <p class="card-value" style="font-size: 0.85rem;">muneebiftikhar00@gmail.com</p>
-        </a>
-        <a href="tel:+923094734475" class="contact-card" id="contact-phone">
-          <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
-          <p class="card-label">Phone</p>
-          <p class="card-value">+92 309-4734475</p>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=923094734475" target="_blank" rel="noopener noreferrer"
-          class="contact-card" id="contact-whatsapp">
-          <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
-          <p class="card-label">WhatsApp</p>
-          <p class="card-value">Available 24/7</p>
-        </a>
-        <a href="https://linkedin.com/in/muhammad-muneebiftikhar" target="_blank" rel="noopener noreferrer"
-          class="contact-card" id="contact-linkedin">
-          <div class="card-icon"><i class="fab fa-linkedin-in"></i></div>
-          <p class="card-label">LinkedIn</p>
-          <p class="card-value">Let's Connect</p>
-        </a>
-      </div>
-
-      <!-- Extended Bio & Personal Info -->
-      <div class="extended-bio fade-in">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <h5 class="mb-3" style="color: var(--primary);">About Me</h5>
-            <p>
-              I am a dedicated Unity Game Developer with a passion for creating immersive digital experiences. My
-              journey in technology started with a fascination for how virtual worlds are constructed, leading me to
-              specialize in game architecture and development. I enjoy the challenge of solving complex technical
-              problems through creative coding and teamwork.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <h5 class="mb-3" style="color: var(--primary);">Personal Details</h5>
-            <ul class="list-unstyled" style="color: var(--text-muted); font-size: 0.95rem;">
-              <li class="mb-2"><strong style="color: var(--text-light);">Date of Birth:</strong> August 10, 1998</li>
-              <li class="mb-2"><strong style="color: var(--text-light);">Nationality:</strong> Pakistani</li>
-              <li class="mb-2"><strong style="color: var(--text-light);">Marital Status:</strong> Married</li>
-              <li class="mb-2"><strong style="color: var(--text-light);">Location:</strong> House E/859D-3, Umar Street
-                4, Lahore, Pakistan</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quote -->
-      <div class="quote-block fade-in">
-        <blockquote>
-          "Around here, we don't look backwards for very long. We KEEP MOVING FORWARD, opening up new doors and doing
-          new things because we're curious and curiosity keeps leading us down new paths."
-        </blockquote>
-        <cite>— Walter E. Disney</cite>
-      </div>
-
-      <!-- Closing -->
-      <div class="closing-text fade-in">
-        <p>Thank you for visiting my portfolio. I hope you have a great day! 🎮</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="https://linkedin.com/in/muhammad-muneebiftikhar" target="_blank" aria-label="LinkedIn"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:muneebiftikhar00@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=923094734475" target="_blank" aria-label="WhatsApp"><i
-            class="fab fa-whatsapp"></i></a>
-      </div>
-      <p>&copy; 2026 Muhammad Muneeb Iftikhar. Crafted with <i class="fas fa-heart" style="color:var(--primary);"></i>
-        and code.
-      </p>
-    </div>
-  </footer>
+  </div>
 
   <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS -->
   <script src="js/main.js"></script>
-
+  <script src="js/chatbot.js?v=1.2"></script>
 </body>
 
 </html>
